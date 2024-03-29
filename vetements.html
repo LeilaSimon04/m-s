@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Achetez chez M'S des vêtements sportifs de qualité pour homme pour des activités en intérieur ou en extérieur.M'S travaille avec les plus grandes marques">
+    <title>M'S - Vêtements de sport</title>
+    <!--Lien pour la carte via Leaflet-->
+    <link rel="stylesheet" href="./node_modules/leaflet/dist/leaflet.css">
+    <!--Lien pour le CSS-->
+    <link rel="stylesheet" href="./style.css">
+    <!--Lien avec FontAwesome-->
+    <script src="https://kit.fontawesome.com/8276700845.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!--HEADER-->
+    <header class="fondNoir flex justifyBetween alignCenter">
+        <div>
+            <a href="./index.html" title="accueil">
+                <img src="./images/imagesSIte/logo-blanc-M-S.png" alt="Logo de M'S - Men Sportswear" class="logo">
+            </a>
+        </div>
+        <nav class="width40">
+            <ul class="flex justifyBetween">
+                <li><a href="./index.html" title="M'S Accueil">Accueil</a></li>
+                <li><a href="./chaussures.html" title="M'S Chaussures de sport">Chaussures</a></li>
+                <li><a href="./vetements.html" title="M'S Vêtements de sport">Vêtements</a></li>
+                <li><a href="./accessoires.html" title="M'S Accessoires de sport">Accessoires</a></li>
+                <li><a href="./@utdoor.html" title="@utdoor matériels sportifs de plein air"
+                        class="aMisEnValeur">@utdoor</a></li>
+            </ul>
+        </nav>
+        <div class="panierCompte flex justifyBetween">
+            <a href="" title="panier"><img src="./images/imagesSIte/header-panier-M-S.png"
+                    alt="icon panier pour voir ses achats"></a>
+            <a href="" title="compte-client"><img src="./images/imagesSIte/header-account-M-S.png"
+                    alt="icon compte client pour accéder au compte"></a>
+        </div>
+    </header>
+    <main class="flex">
+
+    </main>
+    <!--FOOTER-->
+    <footer class="fondNoir paddingBot40">
+        <!--Article pour l'image du logo et la phrase pour trouver les boutiques-->
+        <article class="width20 marginAuto footerLogo textCenter">
+            <a href="./index.html" title="M'S"><img src="./images/imagesSIte/logo-blanc-M-S.png" alt="Logo de M'S"></a>
+            <p>Retrouvez nos boutiques près de chez vous</p>
+        </article>
+        <!--Div pour la CARTE-->
+        <div id="map" class="marginAuto"></div>
+        <!--Div regroupant les 3 div du bas du footer-->
+        <div class="width80 flex justifyBetween marginAuto infosFooter">
+            <!--Plan du site-->
+            <div class="planSite width30">
+                <h6>Plan du site</h6>
+                <nav>
+                    <ul>
+                        <!--J'ai mis dans l'ordre de la barre de navigation du header : chaussures vêtements accessoires outdoor-->
+                        <li><a href="">Accueil</a></li>
+                        <li><a href="">Chaussures</a></li>
+                        <li><a href="">Vêtements</a></li>
+                        <li><a href="">Accessoires</a></li>
+                        <li><a href="">@utdoor</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <!--Horaires de la boutique Contact et CGU-->
+            <div class="width30">
+                <h6>Horaires d'ouverture de nos boutiques</h6>
+                <p>Du lundi au vendredi de 10h à 12h30 puis de 13h30 à 19h <br>
+                    Le samedi de 9h à 18h30 non-stop
+                </p>
+                <br>
+                <h6>Contact</h6>
+                <address>mail@m-s.com</address>
+                <br>
+                <h6><a href="">Conditions Générales d'Utilisation</a></h6>
+            </div>
+            <!--Réseaux sociaux-->
+            <div class="reseaux width30">
+                <h6>Retrouvez-nous sur les réseaux sociaux</h6>
+                <a href="" title="Twitter de M'S"><img src="./images/imagesSIte/TwitterX.png" alt="Logo de Twitter"></a>
+                <a href="" title="Facebook de M'S"><img src="./images/imagesSIte/Facebook.png"
+                        alt="Logo de Facebook"></a>
+                <a href="" title="TikTok de M'S"><img src="./images/imagesSIte/TikTok.png" alt="Logo de TikTok"></a>
+                <a href="" title="Instagram de M'S"><img src="./images/imagesSIte/Instagram.png"
+                        alt="Logo de Instagram"></a>
+            </div>
+        </div>
+    </footer>
+    <!--Lien du script pour Leaflet-->
+    <script src="./node_modules/leaflet/dist/leaflet.js"></script>
+    <!--Lien du script JS-->
+    <script src="./app.js" defer></script>
+    <script src="./carte.js" defer></script>
+</body>
+
+</html>

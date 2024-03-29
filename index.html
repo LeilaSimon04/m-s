@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Pour le référencement naturel j'ai ajouté M-S au nom de chaque image de cette page-->
+    <meta name="description"
+        content="Acheter chez M'S des vêtements, chaussures, baskets et équipements sportifs de qualité pour homme pour des activités en intérieur ou en extérieur.Livraison rapide">
+    <title>M'S - Men Sportswear</title>
+    <!--Lien pour la carte via Leaflet-->
+    <link rel="stylesheet" href="./node_modules/leaflet/dist/leaflet.css">
+    <!--Lien pour le CSS-->
+    <link rel="stylesheet" href="./style.css">
+    <!--Lien avec FontAwesome-->
+    <script src="https://kit.fontawesome.com/8276700845.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!--HEADER-->
+    <header class="fondNoir flex justifyBetween alignCenter">
+        <!--Logo-->
+        <div>
+            <a href="./index.html" title="accueil">
+                <img src="./images/imagesSIte/logo-blanc-M-S.png" alt="Logo de M'S - Men Sportswear" class="logo responsive">
+            </a>
+        </div>
+        <!--Barre de navigation-->
+        <nav class="navBar width40">
+            <ul class="flex justifyBetween">
+                <li><a href="./index.html" title="M'S Accueil">Accueil</a></li>
+                <li><a href="./chaussures.html" title="M'S Chaussures de sport">Chaussures</a></li>
+                <li><a href="./vetements.html" title="M'S Vêtements de sport">Vêtements</a></li>
+                <li><a href="./accessoires.html" title="M'S Accessoires de sport">Accessoires</a></li>
+                <li><a href="./@utdoor.html" title="@utdoor équipements sportifs d'extérieur'" class="aMisEnValeur">@utdoor</a></li>
+            </ul>
+        </nav>
+        <!--Panier d'achats et Compte client-->
+        <div class="panierCompte flex justifyBetween">
+            <a href="" title="panier-achat"><img src="./images/imagesSIte/header-panier-M-S.png"
+                    alt="icon panier pour voir ses achats"></a>
+            <a href="" title="compte-client"><img src="./images/imagesSIte/header-account-M-S.png"
+                    alt="icon compte client pour accéder au compte"></a>
+        </div>
+        <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+        <label id="labelBurger" for="burger">
+            <input type="checkbox" id="burger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+    </header>
+    <!-- Barre de navigation cachée par défaut qui apparait quand on clique sur le Menu Burger-->
+    <nav id="navBarBurger" class="d-none padLeft30">
+        <ul class="">
+            <li><a href="./index.html" title="M'S Accueil">Accueil</a></li>
+            <li><a href="./chaussures.html" title="M'S Chaussures de sport">Chaussures</a></li>
+            <li><a href="./vetements.html" title="M'S Vêtements de sport">Vêtements</a></li>
+            <li><a href="./accessoires.html" title="M'S Accessoires de sport">Accessoires</a></li>
+            <li><a href="./@utdoor.html" title="@utdoor équipements sportifs d'extérieur" class="aMisEnValeur">@utdoor</a></li>
+        </ul>
+    </nav>
+    <main class="flex">
+        <!--HERO-->
+        <section class="hero backgroundImage">
+            <div class="accroche">
+                <h2>Ne cherchez plus chaussure à votre pied</h2>
+                <p>Découvrez notre toute nouvelle gamme de baskets M'S déclinée en 4 coloris</p>
+                <a href="lien sur la page" title="Nouvelle gamme de baskets M'S" class="boutonBleu">Découvrir la gamme</a>
+            </div>
+        </section>
+        <!--Section CARTES des types de PRODUITS-->
+        <section class="containerCardsProduits width80 marginAuto flex justifyBetween">
+            <h3>Nos produits par catégories</h3>
+            <!--Article CHAUSSURES-->
+            <article class="cardProduits width20">
+                <h5 class="fondNoir">CHAUSSURES</h5>
+                <div>
+                    <img src="./images/imagesSIte/categorie-chaussures-M-S.jpg"
+                        alt="Jambes d'un homme chaussés de basket qui court sur une route" class="responsive">
+                </div>
+                <div class="flex">
+                    <p>Baskets, Chaussures de montagnes, Chaussures hautes, chaussures basses, ... partez bien équipés
+                    </p>
+                    <a href="lien sur la page des chaussures" title="M'S Chaussures de sport" class="boutonBlanc">Voir toutes les chaussures</a>
+                </div>
+            </article>
+            <!--J'intervertis l'ordre des articles accessoires et vêtements afin qu'ils soient positionnés comme dans la barre de naivigation-->
+            <!--Article VETEMENTS-->
+            <article class="cardProduits width20">
+                <h5 class="fondNoir">VETEMENTS</h5>
+                <div>
+                    <img src="./images/imagesSIte/categorie-vetements-M-S.jpg"
+                        alt="Un homme s'étire la jambe après avoir fait du sport" class="responsive">
+                </div>
+                <div class="flex">
+                    <p>Vêtements tous sports, jogging, shorts, tee-shirts , hoodies, vestes, chaussettes et débardeurs
+                    </p>
+                    <a href="lien sur la page des vêtements" title="M'S Vêtements de sport" class="boutonBlanc">Voir les modèles de vêtements</a>
+                </div>
+            </article>
+            <!--Article ACCESSOIRES-->
+            <article class="cardProduits width20">
+                <h5 class="fondNoir">ACCESSOIRES</h5>
+                <div>
+                    <img src="./images/imagesSIte/categorie-accessoires-M-S.jpg"
+                        alt="Un homme en randonnée en montagne prend une photo" class="responsive">
+                </div>
+                <div class="flex">
+                    <p>Sac à dos de randonnées, toiles de tente, réchauds, gourdes, matériel de sport interieur et
+                        exterieur</p>
+                    <a href="lien sur la page des accessoires" title="M'S Accesoires de sport" class="boutonBlanc">Voir les accessoires</a>
+                </div>
+            </article>
+        </section>
+        <!--Section @UTDOOR-->
+        <section class="outdoor backgroundImage">
+            <div class="presentationOutdoor flex">
+                <h3>Découvrez notre gamme @utdoor</h3>
+                <p>Une sélection parmis les vêtements techniques de notre fabrication ainsi que des meilleures marques
+                    sur le marché</p>
+                <a href="" class="boutonBlanc">Voir les articles de la gamme @utdoor</a>
+            </div>
+        </section>
+        <!--Article NOUVEAUTE @utoor-->
+        <article class="encartOutdoor width50 flex">
+            <div class="width40">
+                <img src="./images/imagesSIte/outdoor6-M-S.jpg" alt="Tee-shirt @utdoor" class="responsive">
+            </div>
+            <div class="width60 fondNoir detailNouveaute">
+                <div class="flex justifyBetween alignCenter">
+                    <h4>Nouveauté</h4>
+                    <span class="prix">40€</span>
+                </div>
+                <p>Tee shirt technique rando+ , résistant , confortable, tissus déperlant.</p>
+                <ul class="padLeft30">
+                    <li>Respirabilité</li>
+                    <li>Imperméabilité</li>
+                    <li>Anti odeurs</li>
+                </ul>
+                <div class="boutonProduit">
+                    <a href="./teeshirtoutdoor.html" title="M'S Tee-shirt @utdoor">Voir le détail du produit</a>
+                </div>
+            </div>
+        </article>
+        <!--Article Profitez de l'OFFRE-->
+        <article class="promo width80 marginAuto flex justifyBetween">
+            <div class="offre width40">
+                <h3>Profitez de l'offre</h3>
+                <span class="pEnExergue">L'ensemble jogging M'S noir disponible en plusieurs tailles</span>
+                <p class="padTopBot30">Ce jogging alie confort légereté et douceur, pour du sport à l'exterieur comme pour les moments de
+                    détente à la maison</p>
+                <a href="./jogging.html" title="M'S Jogging" class="boutonBlanc">Voir le détail du produit</a>
+            </div>
+            <div class="width50 imgAnimee">
+                <img src="./images/imagesSIte/Jogging-promo-M-S.jpg" alt="Ensemble de jogging en promotion"
+                    class="responsive">
+            </div>
+        </article>
+        <!--Section MARQUES qui font confiance-->
+        <!--J'ai ajouté un TARGET à chaque "<a>" pour que les sites s'ouvrent sur une autre page afin que l'utilisateur n'oublie pas de revenir sur le site de M'S-->
+        <section class="marques fondNoir">
+            <div class="width80 marginAuto flex alignCenter justifyBetween padTopBot30">
+                <h3>Ces marques nous font confiance</h3>
+                <a href="https://www.thenorthface.fr" title="The North Face" target="_blank"><img
+                        src="./images/imagesSIte/the-north-face.png" alt="Logo de The North Face"></a>
+                <a href="https://eu.puma.com/fr" title="Puma" target="_blank"><img src="./images/imagesSIte/puma.png"
+                        alt="Logo de la marque Puma"></a>
+                <a href="https://www.adidas.fr/" title="Adidas" target="_blank"><img
+                        src="./images/imagesSIte/adidas.png" alt="Logo de la marque Adidas"></a>
+                <a href="https://www.nike.com/fr" title="Nike" target="_blank"><img src="./images/imagesSIte/nike.png"
+                        alt="Logo de la marque Nike"></a>
+            </div>
+        </section>
+        <!--Artcile de Présentation qui a été ajouté pour y mettre le h1-->
+        <article class="presentation width80 marginAuto flex justifyBetween">
+            <div class="presentationText width40 flex">
+                <h1>M'S - Votre concepteur et fabricant de vêtements, chaussures et équipements de sport de qualité pour
+                    homme</h1>
+                <p>M'S est une boutique fondée en 1993. Notre objectif est de vous fournir le meilleur pour la pratique
+                    de vos activités sportives en intérieur comme en extérieur. Nous travaillons avec les plus grandes
+                    marques et nous disposons de nos propres ateliers de fabrication.</p>
+            </div>
+            <div class="width40">
+                <img src="./images/imagesSIte/homme-court-M-S.jpg"
+                    alt="Un homme de dos court sur un chemin face au lever du soleil" class="responsive">
+            </div>
+        </article>
+        <!--Article avec image et formulaire de contact-->
+        <article class="contactezNous width80 flex marginAuto">
+            <div class="width30">
+                <img src="./images/imagesSIte/illustration-boxe-M-S.jpg"
+                    alt="Un boxeur saute pour donner un coup de pied dans un sac de boxe" class="responsive">
+            </div>
+            <div class="message width40">
+                <h3>Contactez-nous</h3>
+                <p>Pour des informations sur nos produits, pour toute demande de renseignement ou pour nous faire
+                    remonter un problème techique sur le site, merci de remplir le formulaire suivant.</p>
+                <form action="" method="GET" id="monform">
+                    <fieldset class="flex">
+                        <!--Div Nom + Prenom-->
+                        <div class="flex justifyBetween">
+                            <!--DIV NOM-->
+                            <div class="width40">
+                                <label for="nom">Votre nom : </label>
+                                <input type="text" id="nom" name="nom" class="width100">
+                                <p class="p-error d-none" id="error-nom"></p>
+                            </div>
+                            <!--DIV PRENOM-->
+                            <div class="width40">
+                                <label for="prenom">Votre prénom : </label>
+                                <input type="text" id="prenom" name="prenom" class="width100">
+                                <p class="p-error d-none" id="error-prenom"></p>
+                            </div>
+                        </div>
+                        <!--DIV EMAIL-->
+                        <div class="flex itemCenter width100">
+                            <label for="email">Email :</label>
+                            <input type="email" id="email" title="example@example.com" / class="width100">
+                            <p class="p-error d-none" id="error-email"></p>
+                        </div>
+                        <!--DIV OBJET de l'email-->
+                        <div class="width100">
+                            <label for="objet">Objet</label>
+                            <select name="objet" id="objet" class="width100">
+                                <option value="">Votre question concerne :</option>
+                                <option value="infoGenerales">Demande d'informations générales</option>
+                                <option value="problemeSite">Signaler un problème sur le site</option>
+                                <option value="infoProduit">Demande d'information sur un produit</option>
+                                <option value="problemeProduit">Signaler un problème sur un produit</option>
+                            </select>
+                            <p class="p-error d-none" id="error-objet"></p>
+                            <!--DIV REF PRODUIT-->
+                            <div class="divRefProduit d-none">
+                                <label for="refProduit">Veuillez noter la référence du produit : </label>
+                                <input type="text" id="refProduit" name="refProduit" class="width100">
+                                <p class="p-error d-none" id="error-refProduit"></p>
+                            </div>
+                        </div>
+                        <!--DIV MESSAGE-->
+                        <div class="width100">
+                            <label for="message">Votre message <span id="long"></span></label>
+                            <textarea name="message" id="message" class="width100"></textarea>
+                            <p class="p-error d-none" id="error-message">Votre message est trop long</p>
+                        </div>
+                        <!--DIV Envoyer le message-->
+                        <div>
+                            <input type="submit" value="Envoyer votre message" class="boutonBleu noBorder">
+                        </div>
+
+                    </fieldset>
+                </form>
+            </div>
+        </article>
+    </main>
+    <!--FOOTER-->
+    <footer class="fondNoir paddingBot40">
+        <!--Article pour l'image du logo et la phrase pour trouver les boutiques-->
+        <article class="footerLogo width20 marginAuto textCenter">
+            <a href="./index.html" title="M'S"><img src="./images/imagesSIte/logo-blanc-M-S.png" alt="Logo de M'S"></a>
+            <p>Retrouvez nos boutiques près de chez vous</p>
+        </article>
+        <!--Div pour la CARTE-->
+        <div id="map" class="marginAuto"></div>
+        <!--Div regroupant les 3 div du bas du footer-->
+        <div class="width80 flex justifyBetween marginAuto infosFooter">
+            <!--Plan du site-->
+            <div class="planSite width30">
+                <h6>Plan du site</h6>
+                <nav>
+                    <ul>
+                        <!--J'ai mis dans l'ordre de la barre de navigation du header : chaussures vêtements accessoires outdoor-->
+                        <li><a href="./index.html" title="M'S Accueil">Accueil</a></li>
+                        <li><a href="./chaussures.html" title="M'S Chaussures de sport">Chaussures</a></li>
+                        <li><a href="./vetements.html" title="M'S Vêtements de sport">Vêtements</a></li>
+                        <li><a href="./accessoires.html" title="M'S Accessoires de sport">Accessoires</a></li>
+                        <li><a href="./@utdoor.html" title="M'S @utdoor">@utdoor</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <!--Horaires de la boutique Contact et CGU-->
+            <div class="width30">
+                <h6>Horaires d'ouverture de nos boutiques</h6>
+                <p>Du lundi au vendredi de 10h à 12h30 puis de 13h30 à 19h <br>
+                    Le samedi de 9h à 18h30 non-stop
+                </p>
+                <br>
+                <h6>Contact</h6>
+                <address>mail@m-s.com</address>
+                <br>
+                <h6><a href="./cgu.html" title="M'S CGU">Conditions Générales d'Utilisation</a></h6>
+            </div>
+            <!--Réseaux sociaux-->
+            <div class="reseaux width30">
+                <h6>Retrouvez-nous sur les réseaux sociaux</h6>
+                <a href="lien page Twitter" title="Twitter de M'S"><img src="./images/imagesSIte/TwitterX.png" alt="Logo de Twitter"></a>
+                <a href="lien page Facebook" title="Facebook de M'S"><img src="./images/imagesSIte/Facebook.png" alt="Logo de Facebook"></a>
+                <a href="lien page TikTok" title="TikTok de M'S"><img src="./images/imagesSIte/TikTok.png" alt="Logo de TikTok"></a>
+                <a href="lien page Instagram" title="Instagram de M'S"><img src="./images/imagesSIte/Instagram.png" alt="Logo de Instagram"></a>
+            </div>
+        </div>
+    </footer>
+    <!--Lien du script pour Leaflet-->
+    <script src="./node_modules/leaflet/dist/leaflet.js"></script>
+    <!--Lien du script JS-->
+    <script src="./app.js" defer></script>
+    <script src="./carte.js" defer></script>
+</body>
+
+</html>
